@@ -24,11 +24,12 @@ patch(FormController.prototype, {
                 this.explicitEditReminderAnimation = null;
             };
         }, () => []);
-        // A new root (New, Duplicate, pager, or another record) starts locked.
+        // Existing records start locked; unsaved new records stay editable.
         // Mode changes do not change the root ID, so clicking Edit stays editable.
         useEffect(
             () => {
-                if (this.useExplicitFormEdit && this.model.root.isInEdition) {
+                if (this.useExplicitFormEdit && !this.model.root.isNew &&
+                    this.model.root.isInEdition) {
                     this.model.root.switchMode("readonly");
                 }
             },
@@ -48,7 +49,7 @@ patch(FormController.prototype, {
     get modelParams() {
         const params = super.modelParams;
         if (!this.env.inDialog && this.display.controlPanel) {
-            params.config.mode = "readonly";
+            params.config.mode = this.props.resId || this.props.readonly ? "readonly" : "edit";
         }
         return params;
     },
