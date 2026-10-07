@@ -2,7 +2,7 @@
     "name": "Explicit Form Edit / Save Buttons",
     "version": "19.0.1.1.0",
     "summary": "Read-only forms with explicit Edit, Save and Discard buttons",
-    "category": "Hidden/Tools",
+    "category": "Tools/UI",
     "license": "LGPL-3",
     "depends": ["web"],
     "assets": {
