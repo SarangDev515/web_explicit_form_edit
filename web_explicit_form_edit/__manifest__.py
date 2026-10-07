@@ -1,6 +1,6 @@
 {
-    "name": "Form Edit / Save Buttons",
-    "version": "19.0.1.2.0",
+    "name": "Explicit Form Edit / Save Buttons",
+    "version": "19.0.1.3.0",
     "summary": "Read-only forms with explicit Edit, Save and Discard buttons",
     "category": "Tools/UI",
     'author': 'SARANG T',
