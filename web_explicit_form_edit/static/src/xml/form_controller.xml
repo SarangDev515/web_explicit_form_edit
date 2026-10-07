@@ -2,17 +2,20 @@
 <templates xml:space="preserve">
     <t t-name="web_explicit_form_edit.FormView"
        t-inherit="web.FormView" t-inherit-mode="extension">
+        <xpath expr="//t[@t-set-slot='control-panel-create-button']/button" position="attributes">
+            <attribute name="t-if">canCreate and (!useExplicitFormEdit or !model.root.isInEdition)</attribute>
+        </xpath>
         <xpath expr="//t[@t-set-slot='control-panel-create-button']/button" position="after">
             <t t-if="useExplicitFormEdit">
                 <button t-if="!model.root.isInEdition and canExplicitlyEdit"
-                        type="button" class="btn btn-outline-primary o_form_button_edit ms-2"
+                        type="button" class="btn btn-secondary o_form_button_edit ms-2"
                         data-hotkey="e" t-att-disabled="explicitFormState.busy"
                         t-ref="explicitEditButton" t-on-click.stop="explicitEdit">Edit</button>
                 <t t-if="model.root.isInEdition and canExplicitlyEdit">
                     <button type="button" class="btn btn-outline-primary o_form_button_save ms-2"
                             data-hotkey="s" t-att-disabled="explicitFormState.busy"
                             t-on-click.stop="() => this.saveButtonClicked()">Save</button>
-                    <button type="button" class="btn btn-outline-primary o_form_button_cancel ms-2"
+                    <button type="button" class="btn btn-secondary o_form_button_cancel ms-2"
                             data-hotkey="j" t-att-disabled="explicitFormState.busy"
                             t-on-click.stop="discard">Discard</button>
                 </t>
