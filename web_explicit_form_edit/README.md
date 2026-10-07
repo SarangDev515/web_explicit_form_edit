@@ -3,10 +3,11 @@
 Frontend-only addon for standard backend full-page form views.
 
 ## Behavior
+- Read-only mode shows New / Edit; edit mode shows only Save / Discard (subject to view permissions).
 - Existing records start read-only. Click Edit to unlock fields.
 - New opens directly in edit mode with Save / Discard; no extra Edit click is needed.
 - Clicking a locked field or its label makes Edit jump twice as a reminder. Links and action buttons are excluded; repeated clicks do not stack animations. Reduced-motion users see two subtle opacity pulses instead.
-- Edit, Save and Discard use the same outlined button style as Odoo's New button.
+- Edit and Discard use btn-secondary. Save keeps its outlined-primary style, and New keeps its native Odoo style.
 - Native cloud-save and X-discard indicators are replaced on these forms.
 - Successful explicit Save or Discard returns an existing record to read-only mode.
 - Failed validation keeps the form editable.
