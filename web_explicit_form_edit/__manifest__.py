@@ -4,6 +4,7 @@
     "summary": "Read-only forms with explicit Edit, Save and Discard buttons",
     "category": "Tools/UI",
     "license": "LGPL-3",
+    "images": ["static/description/cover.png"],
     "depends": ["web"],
     "assets": {
         "web.assets_backend": [
