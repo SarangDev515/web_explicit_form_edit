@@ -3,7 +3,8 @@
 Frontend-only addon for standard backend full-page form views.
 
 ## Behavior
-- Existing records and new forms start read-only. Click Edit to unlock fields.
+- Existing records start read-only. Click Edit to unlock fields.
+- New opens directly in edit mode with Save / Discard; no extra Edit click is needed.
 - Clicking a locked field or its label makes Edit jump twice as a reminder. Links and action buttons are excluded; repeated clicks do not stack animations. Reduced-motion users see two subtle opacity pulses instead.
 - Edit, Save and Discard use the same outlined button style as Odoo's New button.
 - Native cloud-save and X-discard indicators are replaced on these forms.
@@ -29,7 +30,7 @@ Technical module name: web_explicit_form_edit.
 3. Change a value and Save: value persists and fields lock.
 4. Edit a value and Discard: original value returns and fields lock.
 5. Clear a required field and Save: validation appears and fields stay editable.
-6. Click New: form is locked until Edit; enter required values and Save.
+6. Click New: form is immediately editable with Save / Discard; enter required values and Save. The saved record then becomes read-only.
 7. Navigate with the pager and Duplicate: next form starts locked.
 8. Check one2many fields, a user with limited permissions, and a popup wizard.
 9. Check small-screen layout and other installed web customizations.
