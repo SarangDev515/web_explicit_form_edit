@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Explicit Form Edit / Save Buttons — Odoo 19</title></head>
+<body style="margin:0;background:#f5f6fa;color:#20243b;font-family:system-ui,-apple-system,sans-serif;line-height:1.65;">
+<main style="max-width:1000px;margin:auto;padding:36px 24px;">
+<section style="background:#fff;padding:36px;border:1px solid #e0e3ed;border-radius:12px;">
+<img src="icon.png" alt="Explicit Form Edit / Save Buttons module icon" width="112" height="112" style="float:right;margin:0 0 20px 24px;max-width:100%;">
+<p style="margin:0 0 12px;color:#4938bb;font-weight:700;letter-spacing:1px;">ODOO 19 · BACKEND FORM VIEWS</p>
+<h1 style="font-size:36px;line-height:1.15;margin:0 0 20px;max-width:650px;">Read first.<br>Edit when you choose.</h1>
+<p style="font-size:19px;max-width:680px;margin:0;">Explicit Form Edit / Save Buttons opens standard full-page forms in read-only mode. Click Edit to unlock permitted fields, then Save or Discard to finish.</p>
+<div style="clear:both;"></div>
+</section>
+<section style="padding:28px 0;">
+<h2 style="font-size:26px;margin:0 0 20px;">How it works</h2>
+<table style="width:100%;border-collapse:collapse;background:#fff;text-align:left;">
+<thead><tr style="background:#252342;color:#fff;"><th style="padding:14px;">Step</th><th style="padding:14px;">Your action</th><th style="padding:14px;">Form behavior</th></tr></thead>
+<tbody>
+<tr><td style="padding:16px;border-bottom:1px solid #e0e3ed;">01 · View</td><td style="padding:16px;border-bottom:1px solid #e0e3ed;">Open a record</td><td style="padding:16px;border-bottom:1px solid #e0e3ed;">Fields are read-only. The Edit button is available when the view permits editing.</td></tr>
+<tr><td style="padding:16px;border-bottom:1px solid #e0e3ed;">02 · Edit</td><td style="padding:16px;border-bottom:1px solid #e0e3ed;">Click Edit</td><td style="padding:16px;border-bottom:1px solid #e0e3ed;">Permitted fields become editable. Save and Discard replace Edit.</td></tr>
+<tr><td style="padding:16px;border-bottom:1px solid #e0e3ed;">03 · Save</td><td style="padding:16px;border-bottom:1px solid #e0e3ed;">Click Save</td><td style="padding:16px;border-bottom:1px solid #e0e3ed;">Successful saving locks the form again. Validation errors leave it editable for correction.</td></tr>
+<tr><td style="padding:16px;">04 · Discard</td><td style="padding:16px;">Click Discard</td><td style="padding:16px;">Existing records revert their unsaved changes and return to read-only mode. New unsaved records use Odoo's normal back navigation.</td></tr>
+</tbody></table>
+</section>
+<section style="background:#fff;border:1px solid #e0e3ed;border-radius:12px;padding:28px;margin-bottom:24px;">
+<h2 style="margin:0 0 12px;font-size:26px;">A familiar button style</h2>
+<p>The native cloud-save and X-discard icons are removed from covered forms. Text buttons use the same outlined style as New.</p>
+<p style="color:#686c80;font-size:14px;">Illustration only — these are not live Odoo controls.</p>
+<div style="padding:20px;background:#f5f6fa;border:1px solid #e0e3ed;border-radius:6px;">
+<p style="margin:0 0 12px;">Read-only form</p>
+<span style="display:inline-block;border:1px solid #71639e;color:#71639e;padding:7px 18px;border-radius:4px;margin-right:8px;">New</span><span style="display:inline-block;border:1px solid #71639e;color:#71639e;padding:7px 18px;border-radius:4px;">Edit</span>
+<p style="margin:20px 0 12px;">Editing form</p>
+<span style="display:inline-block;border:1px solid #71639e;color:#71639e;padding:7px 18px;border-radius:4px;margin-right:8px;">New</span><span style="display:inline-block;border:1px solid #71639e;color:#71639e;padding:7px 18px;border-radius:4px;margin-right:8px;">Save</span><span style="display:inline-block;border:1px solid #71639e;color:#71639e;padding:7px 18px;border-radius:4px;">Discard</span>
+</div></section>
+<section style="padding:0 4px 24px;">
+<h2 style="font-size:26px;">Scope and permissions</h2>
+<ul style="padding-left:22px;">
+<li>Standard full-page backend forms with a control panel are covered.</li>
+<li>Click a locked field or its label and the Edit button jumps twice to remind you to unlock the form. Links and action buttons are excluded. Reduced-motion users see a subtle pulse instead.</li>
+<li>New records start locked too: click New, then Edit, enter the required fields, and Save.</li>
+<li>Pager navigation and Duplicate start the newly opened form in read-only mode.</li>
+<li>Popup dialogs, wizards, and forms without a control panel retain their native workflow.</li>
+<li>Existing read-only field rules, view restrictions, and server access rights still apply.</li>
+</ul>
+<div style="background:#fff6df;border:1px solid #e4cf96;padding:20px;border-radius:6px;"><strong>Important: an editing gate, not a security or save policy.</strong><p style="margin:8px 0 0;">Odoo's automatic saving during navigation, tab visibility changes, and business actions is retained. Chatter, business-action buttons, list editing, imports, and API operations are not blocked by this addon.</p></div>
+</section>
+<section style="background:#fff;border:1px solid #e0e3ed;border-radius:12px;padding:28px;">
+<h2 style="font-size:26px;margin:0 0 14px;">Installation</h2>
+<ol style="padding-left:22px;">
+<li>Place <code>web_explicit_form_edit</code> in a directory included in your Odoo <code>addons_path</code>.</li>
+<li>Restart the Odoo server and enable developer mode.</li>
+<li>Open Apps and run Update Apps List. Remove the default Apps filter.</li>
+<li>Search for <strong>Explicit Form Edit / Save Buttons</strong> and install it.</li>
+<li>Hard-refresh the browser with <strong>Ctrl + Shift + R</strong>.</li>
+</ol>
+<p style="margin-bottom:0;"><strong>Already installed?</strong> Upgrade the module and hard-refresh after updating its files. Uninstall and refresh to restore native form behavior.</p>
+</section>
+<footer style="padding:24px 4px;color:#686c80;font-size:14px;">Technical name: web_explicit_form_edit · Dependency: web · License: LGPL-3<br>Test record editing, validation, new records, relation fields, and popup workflows in your development database before production use.</footer>
+</main></body></html>
