@@ -1,5 +1,5 @@
 {
-    "name": "Explicit Form Edit / Save Buttons",
+    "name": "Form Edit / Save Buttons",
     "version": "19.0.1.2.0",
     "summary": "Read-only forms with explicit Edit, Save and Discard buttons",
     "category": "Tools/UI",
