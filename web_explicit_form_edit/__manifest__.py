@@ -3,6 +3,7 @@
     "version": "19.0.1.1.0",
     "summary": "Read-only forms with explicit Edit, Save and Discard buttons",
     "category": "Tools/UI",
+    'author': 'SARANG T',
     "license": "LGPL-3",
     "images": ["static/description/cover.png"],
     "depends": ["web"],
