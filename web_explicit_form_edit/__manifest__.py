@@ -5,7 +5,7 @@
     "category": "Tools/UI",
     'author': 'SARANG T',
     "license": "LGPL-3",
-    "images": ["static/description/cover.png"],
+    "images": ["static/description/edit-save-banner.png"],
     "depends": ["web"],
     "assets": {
         "web.assets_backend": [
